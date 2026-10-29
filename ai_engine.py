@@ -46,7 +46,7 @@ def analyze_finances(snapshot: dict) -> dict:
 
     # Initialize the modern Google GenAI client
     client = genai.Client(api_key=api_key)
-    model_name = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    model_name = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
     fallback_model = os.environ.get("GEMINI_FALLBACK_MODEL", "gemini-1.5-flash")
 
     hint = PERSONA_HINTS.get(snapshot.get("persona"), "")
